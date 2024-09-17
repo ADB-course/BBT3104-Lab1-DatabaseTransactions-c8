@@ -4,7 +4,7 @@
 
 | **Key**                                                               | Value                                                                                                                                                                              |
 |---------------|---------------------------------------------------------|
-| **Group Name**                                                               | ? |
+| **Group Name**                                                             | c8|
 | **Semester Duration**                                                 | 19<sup>th</sup> August - 25<sup>th</sup> November 2024                                                                                                                       |
 
 ## Flowchart
@@ -12,3 +12,10 @@
 ## Pseudocode
 
 ## Support for the Sales Departments' Report
+Objective: Identify orders that have not been paid in full and the remaining balance for each.
+
+Database Enhancements:
+- The totalAmount field can be added to track the total value of an order.
+- The orderNumber field can be added to the payments table to track partial payments.
+- The remainingBalance field can be added to the orders table and updated automatically after each payment.
+
