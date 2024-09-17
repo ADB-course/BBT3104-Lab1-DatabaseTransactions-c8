@@ -8,14 +8,30 @@
 | **Semester Duration**                                                 | 19<sup>th</sup> August - 25<sup>th</sup> November 2024                                                                                                                       |
 
 ## Flowchart
-
+![alt text](<WhatsApp Image 2024-09-17 at 03.50.30_278b17d0.jpg>)
 ## Pseudocode
+START
 
+SET TRANSACTION ISOLATION LEVEL
+
+SELECT DATABASE
+
+START TRANSACTION
+
+GET OrderNumber
+
+INSERT INTO Orders (OrderNumber)
+INSERT INTO OrderItems (OrderId, ProductId, Quantity)
+
+UPDATE Products SET Quantity = Quantity - QuantitySold WHERE ProductId = ProductId
+
+SAVEPOINT beforeProduct
+
+RECEIVE Payment
+
+COMMIT
 ## Support for the Sales Departments' Report
-Objective: Identify orders that have not been paid in full and the remaining balance for each.
-
 Database Enhancements:
 - The totalAmount field can be added to track the total value of an order.
 - The orderNumber field can be added to the payments table to track partial payments.
 - The remainingBalance field can be added to the orders table and updated automatically after each payment.
-
